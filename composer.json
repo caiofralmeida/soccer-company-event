@@ -1,0 +1,29 @@
+{
+    "name": "caiofralmeida/soccer-company-event",
+    "type": "project",
+    "keywords": ["phalcon-framework","web","php"],
+    "licence": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Caio Almeida",
+            "email": "caio.f.r.amd@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.4",
+        "ext-phalcon": "2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {"CaioFRAlmeida\\SoccerCompanyEvent\\": "src/"}
+    },
+    "autoload-dev": {
+       "psr-4": {"CaioFRAlmeidaTest\\SoccerCompanyEvent\\": "tests/"}
+   }
+}

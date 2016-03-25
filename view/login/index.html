@@ -1,0 +1,27 @@
+{% extends "layout/main.html" %}
+
+{% block content %}
+<div class="large-4 large-centered columns">
+    <div class="row login-container">
+        <div class="large-12 columns">
+        <form action="/login" method="post">
+           <div class="row">
+             <div class="large-12 columns">
+                 <input type="text" name="username" placeholder="usuario@catho.com" />
+             </div>
+           </div>
+          <div class="row">
+             <div class="large-12 columns">
+                 <input type="password" name="password" placeholder="senha" />
+             </div>
+          </div>
+          <div class="row">
+            <div class="large-12 large-centered columns">
+              <input type="submit" class="button expand" value="Entrar"/>
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

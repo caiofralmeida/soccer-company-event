@@ -1,0 +1,59 @@
+{% extends "layout/main.html" %}
+
+{% block content %}
+
+{% include "component/menu.html" %}
+
+<div class="off-canvas-wrapper">
+
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        {% include "component/user-painel.html" %}
+        <div class="off-canvas-content" id="conteudo-painel" data-off-canvas-content>
+            <div class="title-bar hide-for-large">
+                <div class="title-bar-left">
+                    <button class="menu-icon" type="button" data-open="my-info"></button>
+                    <span class="title-bar-title">Mike Mikerson</span>
+                </div>
+            </div>
+
+            <div class="row small-up-2 medium-up-3 large-up-4">
+                {% include "component/card.html" with ["name": "Novo jogador", "img": "/images/icons/male.png"] %}
+                {% include "component/card.html" with ["name": "Novo evento", "img": "/images/icons/calendar.png"] %}
+            </div>
+            <hr>
+
+            <div class="callout secondary">
+                <div class="row column">
+                    <h3>Próximo evento</h3>
+                    <p class="lead">
+                        <ul>
+                            <li>Data: Terça-feira (25/03/2016)</li>
+                            <li>Local: Av. Batatais, 559</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <h3>Jogadores</h3>
+
+            <div class="row">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Próximo evento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Caio Almeida</td>
+                            <td>Confirmado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -10,4 +10,6 @@ $app = new \Phalcon\Mvc\Micro($di);
 
 require __DIR__ . '/../config/routes.php';
 
+$app->before(new \CaioFRAlmeida\SoccerCompanyEvent\Middleware\IsAutenticado());
+
 $app->handle();

@@ -14,6 +14,7 @@
         
 <div class="large-4 large-centered columns">
     <div class="row login-container">
+        <h5>FutCatho</h5>
         <div class="large-12 columns">
         <form action="/login" method="post">
            <div class="row">
@@ -31,6 +32,7 @@
               <input type="submit" class="button expand" value="Entrar"/>
             </div>
           </div>
+          <p><?php echo $this->flashSession->output(); ?></p>
         </form>
         </div>
     </div>

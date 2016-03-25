@@ -14,7 +14,7 @@ install:
  - composer install
 
 script:
- - vendor/bin/phpunit
+ - sh run_tests.sh
 
 after_success:
  - php vendor/bin/coveralls -v

@@ -12,7 +12,7 @@ return [
         'engine' => 'Phalcon\Mvc\View\Engine\Volt',
         'prefix' => '.html',
         'options' => [
-            'compileAlways' => true
+            'compileAlways' => false
         ]
     ]
 ];

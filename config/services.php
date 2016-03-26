@@ -7,7 +7,15 @@ use Phalcon\Config\Adapter\Php as PhpConfig;
 $di = new FactoryDefault();
 
 $di->set('config', function() {
-    return new PhpConfig(__DIR__ . '/app.php');
+    $config = new PhpConfig(__DIR__ . '/app.php');
+
+    if (is_readable(__DIR__ . '/app.development.php')
+        && getenv('APPLICATION_ENV') == 'development') {
+        $development = new PhpConfig(__DIR__. '/app.development.php');
+        $config->merge($development);
+    }
+
+    return $config;
 }, true);
 
 $di->set('view', function() use ($di) {

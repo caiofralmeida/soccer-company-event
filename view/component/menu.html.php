@@ -1,7 +1,7 @@
 <div class="top-bar">
     <div class="top-bar-left">
         <ul class="menu">
-            <li class="menu-text">FutCatho</li>
+            <li class="menu-text"><?php echo $appConfig->name; ?></li>
         </ul>
     </div>
     <div class="top-bar-right">

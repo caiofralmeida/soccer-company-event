@@ -6,7 +6,7 @@
     </div>
     <div class="top-bar-right">
         <ul class="menu">
-            <li><a href="/logout">Sair</a></li>
+            <li><a class="button alert" href="/logout">Sair</a></li>
         </ul>
     </div>
 </div>

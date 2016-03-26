@@ -10,10 +10,23 @@
     color: #fff;
     height: 100%;
 
+    .nome-user {
+        font-size: 25px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .label {
+        background: #1abc9c;
+    }
+
     ul {
         margin-left: 10px;
         font-size: 13px;
         text-transform: uppercase;
+        li {
+            margin-top: 10px;
+        }
     }
 }
 
@@ -32,7 +45,13 @@
     }
     span {
         display: block;
+        margin-top: 10px;
         padding: 5px;
+        background: #34495e;
+        width: 136px;
+        text-transform: uppercase;
+        font-size: 11px;
+        text-align: center;
     }
 }
 

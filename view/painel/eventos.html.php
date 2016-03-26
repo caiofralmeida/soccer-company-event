@@ -45,8 +45,8 @@
 
             <h3>Novo evento</h3>
 
-            <form>
-              <div class="row novo-jogador">
+            <form name="adicionar-event">
+              <div class="row">
                 <div class="medium-6 columns">
                   <label>Nome
                     <input type="text" name="titulo" placeholder="ex: Futebol 2016">

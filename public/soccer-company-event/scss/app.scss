@@ -51,3 +51,15 @@
 
 @import 'login';
 @import 'painel';
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #ecf0f1;
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}

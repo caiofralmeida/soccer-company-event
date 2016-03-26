@@ -2,6 +2,8 @@
 
 $loginController = new CaioFRAlmeida\SoccerCompanyEvent\Controller\LoginController();
 $painelController = new CaioFRAlmeida\SoccerCompanyEvent\Controller\PainelController();
+$jogadorController = new CaioFRAlmeida\SoccerCompanyEvent\Controller\JogadorController();
+$eventoController = new CaioFRAlmeida\SoccerCompanyEvent\Controller\EventoController();
 
 $app->get('/login', [$loginController, 'indexAction'])
     ->setName('get_login');
@@ -13,6 +15,10 @@ $app->get('/logout', [$loginController, 'logoutAction']);
 
 $app->get('/', [$painelController, 'indexAction']);
 
+$app->get('/jogadores', [$jogadorController, 'indexAction']);
+
+$app->get('/eventos', [$eventoController, 'indexAction']);
+
 $app->notFound(function(){
-    echo ' nao existo';die;
+    echo 'página não encontrada :(';die;
 });

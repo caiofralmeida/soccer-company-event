@@ -43,23 +43,23 @@
 
         <div class="off-canvas-content" id="conteudo-painel" data-off-canvas-content>
 
-            <div class="row small-up-2 medium-up-3 large-up-4">
-                <?php $this->partial('component/card.html', array('name' => 'Novo jogador', 'img' => '/images/icons/male.png', 'link' => '/jogadores')); ?>
-                <?php $this->partial('component/card.html', array('name' => 'Novo evento', 'img' => '/images/icons/calendar.png', 'link' => '/eventos')); ?>
-            </div>
-            <hr>
+            <h3>Novo jogador</h3>
 
-            <div class="callout">
-                <div class="row column">
-                    <h3>Próximo evento</h3>
-                    <p class="lead">
-                        <ul>
-                            <li>Data: Terça-feira (25/03/2016)</li>
-                            <li>Local: Av. Batatais, 559</li>
-                        </ul>
-                    </p>
+            <form>
+              <div class="row novo-jogador">
+                <div class="medium-6 columns">
+                  <label>Buscar por nome:
+                    <input type="text" name="nome-jogador" id="nome-jogador" placeholder="ex: João">
+                    <input type="hidden" name="id-jogador" id="id-jogador" value="">
+                    <div class="suggest">
+                    </div>
+                  </label>
+
+                    <br />
+                    <button type="button" id="btn-jogador" disabled="disabled" class="success button">Adicionar</button>
                 </div>
-            </div>
+              </div>
+            </form>
 
             <h3>Jogadores</h3>
 

@@ -32,7 +32,7 @@
               <input type="submit" class="button expand" value="Entrar"/>
             </div>
           </div>
-          <p><?php echo $this->flashSession->output(); ?></p>
+          <?php echo $this->flashSession->output(); ?>
         </form>
         </div>
     </div>

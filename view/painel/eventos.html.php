@@ -43,42 +43,35 @@
 
         <div class="off-canvas-content" id="conteudo-painel" data-off-canvas-content>
 
-            <div class="row small-up-2 medium-up-3 large-up-4">
-                <?php $this->partial('component/card.html', array('name' => 'Novo jogador', 'img' => '/images/icons/male.png', 'link' => '/jogadores')); ?>
-                <?php $this->partial('component/card.html', array('name' => 'Novo evento', 'img' => '/images/icons/calendar.png', 'link' => '/eventos')); ?>
-            </div>
-            <hr>
+            <h3>Novo evento</h3>
 
-            <div class="callout">
-                <div class="row column">
-                    <h3>Próximo evento</h3>
-                    <p class="lead">
-                        <ul>
-                            <li>Data: Terça-feira (25/03/2016)</li>
-                            <li>Local: Av. Batatais, 559</li>
-                        </ul>
-                    </p>
+            <form>
+              <div class="row novo-jogador">
+                <div class="medium-6 columns">
+                  <label>Nome:
+                    <input type="text" placeholder="ex: Futebol 2016">
+                  </label>
+                  <label>Local:
+                    <input type="text" placeholder="ex: Av. Batatais, 559 - Tamboré">
+                  </label>
+                  <label>Data/Horário:
+                      <br />
+                    <button class="button">Definir</button>
+                  </label>
+                  <label>Período (hh:mm):
+                      <br />
+                    <input type="text" placeholder="ex: 1:30" />
+                  </label>
+                  <label>Ocorrerá todo mês:
+                      <br />
+                    Sim <input type="radio" name="mensal" value="1" />
+                    Não <input type="radio" name="mensal" value="0" checked />
+                  </label>
+                  <br />
+                  <button class="success button">Adicionar</button>
                 </div>
-            </div>
-
-            <h3>Jogadores</h3>
-
-            <div class="row">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Próximo evento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Caio Almeida</td>
-                            <td>Confirmado</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+              </div>
+            </form>
         </div>
     </div>
 </div>

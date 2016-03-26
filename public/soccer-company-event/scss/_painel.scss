@@ -3,8 +3,27 @@
 }
 
 #user-painel {
-    position: absolute;
+    position: fixed;
+    margin-top: 54px;
     padding-top: 30px;
+    background: #34495e;
+    color: #fff;
+    height: 100%;
+
+    ul {
+        margin-left: 10px;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
+
+.callout {
+    background: #ecf0f1;
+    border: none;
+}
+
+.menu-text {
+    color: #fff;
 }
 
 .card {
@@ -15,4 +34,30 @@
         display: block;
         padding: 5px;
     }
+}
+
+.novo-jogador {
+
+    input[type="text"] {
+        margin-bottom: 1px;
+    }
+
+    .suggest {
+        ul {
+            padding: 0;
+            margin: 0;
+            background: #ecf0f1;
+
+            li {
+                padding: 5px 0px 5px 5px;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
 }

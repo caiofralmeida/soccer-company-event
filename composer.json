@@ -25,6 +25,6 @@
         "psr-4": {"CaioFRAlmeida\\SoccerCompanyEvent\\": "src/"}
     },
     "autoload-dev": {
-       "psr-4": {"CaioFRAlmeidaTest\\SoccerCompanyEvent\\": "tests/"}
+       "psr-4": {"CaioFRAlmeida\\SoccerCompanyEventTest\\": "tests/"}
    }
 }

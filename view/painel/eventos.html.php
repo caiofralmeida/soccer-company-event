@@ -45,7 +45,7 @@
 
             <h3>Novo evento</h3>
 
-            <form name="adicionar-event">
+            <form name="adicionar-evento">
               <div class="row">
                 <div class="medium-6 columns">
                   <label>Nome
@@ -68,7 +68,7 @@
                     Não <input type="radio" name="mensal" value="0" checked />
                   </label>
                   <br />
-                  <button class="success button">Adicionar</button>
+                  <button class="success button" id="btn-evento">Adicionar</button>
                 </div>
               </div>
             </form>

@@ -36,3 +36,16 @@ $di->set('view', function() use ($di) {
 
     return $view;
 }, true);
+
+$di->set('connection', function () use ($di) {
+    $config = $di->get('config')['database'];
+
+    $adapter = new $config->adapter([
+        "host"     => $config->host,
+        "username" => $config->username,
+        "password" => $config->password,
+        "dbname"   => $config->db
+    ]);
+
+    return $adapter;
+}, true);

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title><?php echo $appConfig->name; ?></title>
         
             <link rel="stylesheet" href="soccer-company-event/css/app.css">
         
@@ -48,21 +48,21 @@
             <form>
               <div class="row novo-jogador">
                 <div class="medium-6 columns">
-                  <label>Nome:
-                    <input type="text" placeholder="ex: Futebol 2016">
+                  <label>Nome
+                    <input type="text" name="titulo" placeholder="ex: Futebol 2016">
                   </label>
-                  <label>Local:
-                    <input type="text" placeholder="ex: Av. Batatais, 559 - Tamboré">
+                  <label>Local
+                    <input type="text" name="local" placeholder="ex: Av. Batatais, 559 - Tamboré">
                   </label>
-                  <label>Data/Horário:
+                  <label>Data/Horário
                       <br />
-                    <button class="button">Definir</button>
+                      <input type="text" name="data" placeholder="ex: 11/11/2016 18:30">
                   </label>
-                  <label>Período (hh:mm):
+                  <label>Período (hh:mm)
                       <br />
-                    <input type="text" placeholder="ex: 1:30" />
+                    <input type="text" name="periodo" placeholder="ex: 1:30" />
                   </label>
-                  <label>Ocorrerá todo mês:
+                  <label>Ocorrerá todo mês
                       <br />
                     Sim <input type="radio" name="mensal" value="1" />
                     Não <input type="radio" name="mensal" value="0" checked />
@@ -79,10 +79,14 @@
 
 
         
+    
             <script src="soccer-company-event/bower_components/jquery/dist/jquery.js"></script>
             <script src="soccer-company-event/bower_components/what-input/what-input.js"></script>
             <script src="soccer-company-event/bower_components/foundation-sites/dist/foundation.js"></script>
+            <script src="soccer-company-event/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
             <script src="soccer-company-event/js/app.js"></script>
         
+    <script src="soccer-company-event/js/eventos.js"></script>
+
     </body>
 </html>

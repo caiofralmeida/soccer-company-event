@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title><?php echo $appConfig->name; ?></title>
         
             <link rel="stylesheet" href="soccer-company-event/css/app.css">
         
@@ -21,7 +21,7 @@
 
              <div class="large-12 columns input-group">
                   <input type="text" placeholder="usuario" name="username" class="input-group-field">
-                  <span class="input-group-label">@catho.com</span>
+                  <span class="input-group-label">@<?php echo $appConfig->domain; ?></span>
                 </div>
            </div>
 

@@ -3,16 +3,16 @@
 return [
     'app' => [
         'name' => 'FutCatho',
-    ],
-    'databases' => [
-
+        'domain' => 'catho.com'
     ],
     'view' => [
         'dir'    => '../view/',
         'engine' => 'Phalcon\Mvc\View\Engine\Volt',
         'prefix' => '.html',
         'options' => [
-            'compileAlways' => false
+            'compileAlways' => false,
+            'compiledPath' => '../view-compiled/',
+            'stat' => true
         ]
     ]
 ];

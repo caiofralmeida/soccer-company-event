@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title><?php echo $appConfig->name; ?></title>
         
             <link rel="stylesheet" href="soccer-company-event/css/app.css">
         
@@ -89,6 +89,7 @@
             <script src="soccer-company-event/bower_components/jquery/dist/jquery.js"></script>
             <script src="soccer-company-event/bower_components/what-input/what-input.js"></script>
             <script src="soccer-company-event/bower_components/foundation-sites/dist/foundation.js"></script>
+            <script src="soccer-company-event/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
             <script src="soccer-company-event/js/app.js"></script>
         
     </body>

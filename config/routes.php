@@ -17,6 +17,8 @@ $app->get('/', [$painelController, 'indexAction']);
 
 $app->get('/jogadores', [$jogadorController, 'indexAction']);
 
+$app->post('/jogadores/add', [$jogadorController, 'addAction']);
+
 $app->get('/eventos', [$eventoController, 'indexAction']);
 
 $app->notFound(function(){

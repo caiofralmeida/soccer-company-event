@@ -45,12 +45,13 @@
 
             <h3>Novo jogador</h3>
 
-            <form>
+            <form name="adicionar-jogador">
               <div class="row novo-jogador">
                 <div class="medium-6 columns">
                   <label>Buscar por nome:
-                    <input type="text" name="nome-jogador" id="nome-jogador" placeholder="ex: João">
-                    <input type="hidden" name="id-jogador" id="id-jogador" value="">
+                    <input type="text" name="nome" id="nome" placeholder="ex: João" autocomplete="off">
+                    <input type="hidden" name="id" id="id" value="">
+                    <input type="hidden" name="departamento" id="departamento" value="devel">
                     <div class="suggest">
                     </div>
                   </label>
@@ -61,6 +62,13 @@
               </div>
             </form>
 
+            <div class="row">
+                <ul id="messages">
+
+                </ul>
+            </div>
+
+            <?php if ($jogadores->count() > 0) { ?>
             <h3>Jogadores</h3>
 
             <div class="row">
@@ -68,17 +76,20 @@
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            <th>Próximo evento</th>
+                            <th>Departamento</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($jogadores as $jogador) { ?>
                         <tr>
-                            <td>Caio Almeida</td>
-                            <td>Confirmado</td>
+                            <td><?php echo $jogador->nome; ?></td>
+                            <td><?php echo $jogador->departamento; ?></td>
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
+            <?php } ?>
         </div>
     </div>
 </div>
@@ -86,11 +97,15 @@
 
 
         
+    
             <script src="soccer-company-event/bower_components/jquery/dist/jquery.js"></script>
             <script src="soccer-company-event/bower_components/what-input/what-input.js"></script>
             <script src="soccer-company-event/bower_components/foundation-sites/dist/foundation.js"></script>
             <script src="soccer-company-event/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
             <script src="soccer-company-event/js/app.js"></script>
         
+    <script src="/soccer-company-event/js/jogadores-suggest.js"></script>
+    <script src="/soccer-company-event/js/jogadores.js"></script>
+
     </body>
 </html>

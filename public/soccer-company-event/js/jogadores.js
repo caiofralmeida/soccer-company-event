@@ -2,7 +2,7 @@ Jogadores = {
     adicionar: function () {
         $("#btn-jogador").click(function(){
 
-            $("#errors").html("");
+            $("#messages").html("");
 
             $.ajax({
                 "type": "post",

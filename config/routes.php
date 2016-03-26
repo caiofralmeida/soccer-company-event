@@ -21,6 +21,8 @@ $app->post('/jogadores/add', [$jogadorController, 'addAction']);
 
 $app->get('/eventos', [$eventoController, 'indexAction']);
 
+$app->post('/eventos/add', [$eventoController, 'addAction']);
+
 $app->notFound(function(){
     echo 'página não encontrada :(';die;
 });

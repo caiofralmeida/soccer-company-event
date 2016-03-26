@@ -2,17 +2,15 @@
 
 namespace CaioFRAlmeida\SoccerCompanyEvent\Controller;
 
-use Phalcon\Mvc\Controller;
 use CaioFRAlmeida\SoccerCompanyEvent\Validator\JogadorValidation;
-use Phalcon\Http\Response;
 use CaioFRAlmeida\SoccerCompanyEvent\Jogador;
 
-class JogadorController extends Controller
+class JogadorController extends BaseController
 {
     public function indexAction()
     {
         $jogadores = Jogador::find();
-        
+
         $this->view->setVar('jogadores', $jogadores);
         echo $this->view->render('painel/jogadores');
     }
@@ -36,14 +34,5 @@ class JogadorController extends Controller
         }
 
         return $this->jsonResponse(['ok' => true, 'id' => $jogador->getId()]);
-    }
-
-    private function jsonResponse($data)
-    {
-        $response = new Response();
-        $response->setContentType('application/json', 'UTF-8');
-        $response->setJsonContent($data);
-
-        return $response;
     }
 }

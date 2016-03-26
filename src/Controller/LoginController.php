@@ -2,11 +2,10 @@
 
 namespace CaioFRAlmeida\SoccerCompanyEvent\Controller;
 
-use Phalcon\Mvc\Controller;
 use CaioFRAlmeida\SoccerCompanyEvent\Auth\Autenticacao;
 use CaioFRAlmeida\SoccerCompanyEvent\Entity\Usuario;
 
-class LoginController extends Controller
+class LoginController extends BaseController
 {
     public function indexAction()
     {

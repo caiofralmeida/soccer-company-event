@@ -2,9 +2,7 @@
 
 namespace CaioFRAlmeida\SoccerCompanyEvent\Controller;
 
-use Phalcon\Mvc\Controller;
-
-class PainelController extends Controller
+class PainelController extends BaseController
 {
     public function indexAction()
     {

@@ -25,8 +25,21 @@ class Evento extends Model
     {
         $this->nome = isset($data['nome']) ? $data['nome']: null;
         $this->local = isset($data['local']) ? $data['local']: null;
-        $this->dataInicial = $data['data'];
-        $this->dataFinal = CalculadorData::add
+        $this->configurarData($data);
+    }
+
+    private function configurarData($data)
+    {
+        $dataInicial = \DateTime::createFromFormat('d/m/Y H:i', $data['data']);
+        $this->dataInicial = $dataInicial->format('Y-m-d H:i:s');
+
+        if (isset($data['periodo'])) {
+            list($horas, $minutos) = explode(':', $data['periodo']);
+            $calculadorData = new CalculadorData($this->dataInicial);
+            $calculadorData->adicionarHoras($horas);
+            $calculadorData->adicionarMinutos($minutos);
+            $this->dataFinal = $calculadorData->getDate()->format('Y-m-d H:i:s');
+        }
     }
 
     public function columnMap()
@@ -45,5 +58,10 @@ class Evento extends Model
         if (!parent::save($data, $whitelist)) {
             throw new SaveException();
         }
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 }

@@ -49,7 +49,7 @@
               <div class="row">
                 <div class="medium-6 columns">
                   <label>Nome
-                    <input type="text" name="titulo" placeholder="ex: Futebol 2016">
+                    <input type="text" name="nome" placeholder="ex: Futebol 2016">
                   </label>
                   <label>Local
                     <input type="text" name="local" placeholder="ex: Av. Batatais, 559 - Tamboré">
@@ -72,6 +72,12 @@
                 </div>
               </div>
             </form>
+
+            <div class="row">
+                <ul id="messages">
+
+                </ul>
+            </div>
         </div>
     </div>
 </div>

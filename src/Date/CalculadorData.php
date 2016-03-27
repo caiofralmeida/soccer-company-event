@@ -44,8 +44,7 @@ class CalculadorData
 
     private function converterParaDateTime()
     {
-        if ($this->dataCalculada instanceof DateTime)
-        {
+        if ($this->dataCalculada instanceof DateTime) {
             return;
         }
 

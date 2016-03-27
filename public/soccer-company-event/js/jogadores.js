@@ -1,6 +1,6 @@
 Jogadores = {
     adicionar: function () {
-        $("#btn-jogador").click(function(){
+        $("#btn-jogador").click(function(e){
 
             $("#messages").html("");
 
@@ -20,6 +20,8 @@ Jogadores = {
                     }
                 }
             });
+
+            e.preventDefault();
         });
     }
 }

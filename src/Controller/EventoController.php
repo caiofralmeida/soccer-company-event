@@ -18,7 +18,7 @@ class EventoController extends BaseController
         $validation->validate($this->request->getPost());
 
         if (!$validation->isValid()) {
-            return $this->jsonResponse(['ok' => false, 'messages' => $validation->getMessage()]);
+            return $this->jsonResponse(['ok' => false, 'messages' => $validation->getMessages()]);
         }
 
         $evento = new Evento();

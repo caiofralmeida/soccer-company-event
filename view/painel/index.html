@@ -16,17 +16,20 @@
             </div>
             <hr>
 
-            <div class="callout">
-                <div class="row column">
-                    <h3>Próximo evento</h3>
-                    <p class="lead">
-                        <ul>
-                            <li>Data: Terça-feira (25/03/2016)</li>
-                            <li>Local: Av. Batatais, 559</li>
-                        </ul>
-                    </p>
+            {% if proximoEvento %}
+                <div class="callout">
+                    <div class="row column">
+                        <h3>Próximo evento</h3>
+                        <p class="lead">
+                            <ul>
+                                <li>Nome: {{ proximoEvento.nome }}</li>
+                                <li>Data: {{ proximoEvento.dataInicial }}</li>
+                                <li>Local: {{ proximoEvento.local }}</li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
 
             <h3>Jogadores</h3>
 

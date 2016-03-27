@@ -28,6 +28,16 @@ class Evento extends Model
         $this->configurarData($data);
     }
 
+    public function getProximoEvento()
+    {
+        $hoje = date('Y-m-d');
+
+        return $this->findFirst([
+            "dataInicial >= '$hoje 00:00:00'",
+            "order" => "dataInicial"
+        ]);
+    }
+
     private function configurarData($data)
     {
         $dataInicial = \DateTime::createFromFormat('d/m/Y H:i', $data['data']);

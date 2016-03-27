@@ -36,7 +36,7 @@
     <span class="nome-user label">Caio Almeida</span>
     <ul>
         <li><span class="label">desenvolvimento</a></li>
-        <li><span class="label">5 jogos</a></li>
+        <li><span class="label">5 eventos</a></li>
     </ul>
     </div>
 </div>
@@ -49,17 +49,20 @@
             </div>
             <hr>
 
-            <div class="callout">
-                <div class="row column">
-                    <h3>Próximo evento</h3>
-                    <p class="lead">
-                        <ul>
-                            <li>Data: Terça-feira (25/03/2016)</li>
-                            <li>Local: Av. Batatais, 559</li>
-                        </ul>
-                    </p>
+            <?php if ($proximoEvento) { ?>
+                <div class="callout">
+                    <div class="row column">
+                        <h3>Próximo evento</h3>
+                        <p class="lead">
+                            <ul>
+                                <li>Nome: <?php echo $proximoEvento->nome; ?></li>
+                                <li>Data: <?php echo $proximoEvento->dataInicial; ?></li>
+                                <li>Local: <?php echo $proximoEvento->local; ?></li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
 
             <h3>Jogadores</h3>
 

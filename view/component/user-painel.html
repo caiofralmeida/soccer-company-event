@@ -4,7 +4,7 @@
     <span class="nome-user label">Caio Almeida</span>
     <ul>
         <li><span class="label">desenvolvimento</a></li>
-        <li><span class="label">5 jogos</a></li>
+        <li><span class="label">5 eventos</a></li>
     </ul>
     </div>
 </div>
